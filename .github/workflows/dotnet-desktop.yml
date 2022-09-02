@@ -21,8 +21,8 @@ jobs:
     env:
       Solution_Name: ThreadedProjectWorkshop1.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
       Test_Project_Path: ThreadedProjectWorkshop1/ThreadedProjectWorkshop1.csproj                 # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
-      Wap_Project_Directory: https://github.com/Nivedga/DesktopDotnet/tree/main/ThreadedProjectWorkshop1    # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
-      Wap_Project_Path:  https://github.com/Nivedga/DesktopDotnet/tree/main/ThreadedProjectWorkshop1                  # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
+      Wap_Project_Directory: ThreadedProjectWorkshop1.csproj    # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
+      Wap_Project_Path:  \ThreadedProjectWorkshop1.csproj                  # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
 
     steps:
     - name: Checkout
@@ -73,9 +73,6 @@ jobs:
     # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
-    -  run: mkdir -p path/to/artifact
-    -  run: echo hello > path/to/artifact/world.txt
-    - uses: actions/upload-artifact@v3
       with:
-        name: my-artifact
-        path: path/to/artifact/world.txt
+        name: my artifacts
+        path: ${{ env.ThreadedProjectWorkshop1.csproj }}\ThreadedProjectWorkshop1.csproj
