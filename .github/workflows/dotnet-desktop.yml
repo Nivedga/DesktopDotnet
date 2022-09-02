@@ -75,7 +75,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: my artifacts
-        path: $env:ThreadedProjectWorkshop1.csproj
+        path: $env:ThreadedProjectWorkshop1\.csproj
      # path: ${{ env.ThreadedProjectWorkshop1.csproj }}\ThreadedProjectWorkshop1.csproj
         
        # $env:Wap_Project_Directory\AppPackages
