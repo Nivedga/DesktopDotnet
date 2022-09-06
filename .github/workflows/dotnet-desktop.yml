@@ -74,9 +74,12 @@ jobs:
     # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
+    - run: mkdir -p path/to/artifact
+    - run: echo hello > path/to/artifact/world.txt
+    - uses: actions/upload-artifact@v3
       with:
         name: my artifacts
-        path:  ThreadedProjectWorkshop1.csproj/ThreadedProjectWorkshop1.csproj
+        path: path/to/artifact/world.txt
      # path: ${{ env.ThreadedProjectWorkshop1.csproj }}\ThreadedProjectWorkshop1.csproj
         
        # $env:Wap_Project_Directory\AppPackages
