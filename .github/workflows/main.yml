@@ -46,7 +46,7 @@ jobs:
 
         - name: Build Solution
           run: |
-            msbuild.exe ThreadedProjectWorkshop1.sln /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl=../_build
+            msbuild.exe ThreadedProjectWorkshop1/ThreadedProjectWorkshop1.csproj /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl=../_build
           
         - name: Dotnet ThreadedProjectWorkshop1
           run: msbuild.exe publish ThreadedProjectWorkshop1/ThreadedProjectWorkshop1.csproj --configuration release
@@ -54,5 +54,5 @@ jobs:
         - name: Upload artifact
           uses: actions/upload-artifact@v1.0.0
           with:
-            name: EZRepBundle
-            path: ../_build\ThreadedProjectWorkshop1.csproj
+            name: ThreadedProjectWorkshop1
+            path: ../_build/ThreadedProjectWorkshop1.csproj
