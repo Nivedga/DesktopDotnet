@@ -50,10 +50,7 @@ jobs:
         
         - name: Build with dotnet
           run: msbuild.exe  ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj 
-        - name: Create the package
-          run: dotnet pack  ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj
-        - name: Publish the package to GPR
-          run: dotnet nuget push ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj/bin/Release/*.nupkg
+       
         
         - name: Upload artifact
           uses: actions/upload-artifact@v1.0.0
