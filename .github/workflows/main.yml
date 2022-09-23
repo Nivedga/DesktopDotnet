@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
            
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v1
       
         - name: Setup MSBuild
           uses: microsoft/setup-msbuild@v1
@@ -53,7 +53,7 @@ jobs:
        
         
         - name: Upload artifact
-          uses: actions/upload-artifact@v2.0.0
+          uses: actions/upload-artifact@v1.0.0
           with:
             name: ThreadedProjectWorkshop1
             path: ../_build\ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj
