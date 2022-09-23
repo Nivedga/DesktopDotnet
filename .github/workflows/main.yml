@@ -49,11 +49,11 @@ jobs:
             msbuild.exe ThreadedProjectWorkshop1.sln /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
         
         - name: Build with dotnet
-          run: msbuild.exe  ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj 
+          run: msbuild.exe publish ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj 
        
         
         - name: Upload artifact
           uses: actions/upload-artifact@v3.1.0
           with:
             name: artifact
-            path: ./_build\ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj
+            path: ./_build
