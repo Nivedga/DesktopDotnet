@@ -42,7 +42,7 @@ jobs:
           run: mkdir _build
 
         - name: Restore Packages
-          run: nuget restore ThreadedProjectWorkshop1.sln /p:Configuration=Release
+          run: nuget restore ThreadedProjectWorkshop1.sln Configuration=Release
 
        # - name: Build Solution
        #   run: |
