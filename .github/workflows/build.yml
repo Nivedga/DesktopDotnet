@@ -52,7 +52,7 @@ jobs:
         
        - name: Create the app package
          run: |
-            msbuild.exe publish ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj /p:platform="AnyCPU" /p:configuration="Release" 
+            msbuild.exe publish ThreadedProjectWorkshop1/ThreadedProjectWorkshop1.csproj /p:platform="AnyCPU" /p:configuration="Release" 
        
         
        - name: Upload artifact
