@@ -50,10 +50,11 @@ jobs:
        #   run: |
       #      msbuild.exe ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Debug" /p:PublishUrl=./_build
         
-       - name: Create the app package
-         run: |
-            msbuild.exe publish  /p:configuration=Release /p:platform="Any CPU" ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj 
-       
+       #- name: Create the app package
+       #  run: |
+        #  msbuild.exe publish  /p:configuration=Release /p:platform="Any CPU" ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj 
+       - name: Publish
+         run: dotnet publish ThreadedProjectWorkshop1/ThreadedProjectWorkshop1.csproj -c Release -o release — nologo
         
        - name: Upload artifact
          uses: actions/upload-artifact@v3.1.0
