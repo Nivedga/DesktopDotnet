@@ -54,7 +54,7 @@ jobs:
        #  run: |
         #  msbuild.exe publish  /p:configuration=Release /p:platform="Any CPU" ThreadedProjectWorkshop1\ThreadedProjectWorkshop1.csproj 
        - name: Publish
-         run: dotnet publish ThreadedProjectWorkshop1/ThreadedProjectWorkshop1.csproj -c Release -o release  nologo
+         run: dotnet publish ThreadedProjectWorkshop1/ThreadedProjectWorkshop1.csproj -c Release -o release 
         
        - name: Upload artifact
          uses: actions/upload-artifact@v3.1.0
