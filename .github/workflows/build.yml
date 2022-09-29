@@ -38,7 +38,7 @@ jobs:
       #   run: mkdir _build
 
        - name: Restore Packages
-         run: nuget restore ThreadedProjectWorkshop1.sln
+         run: nuget restore ThreadedProjectWorkshop1.sln -PackagesDirectory Packages
        
        - name: Build Solution
          run: |
